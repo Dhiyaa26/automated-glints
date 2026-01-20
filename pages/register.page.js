@@ -4,6 +4,7 @@ export class RegisterPage {
 
     this.registerWithEmailBtn = page.getByText('Daftar dengan email');
     this.firstNameInput = page.getByLabel('Nama depan');
+    this.noHpInput = page.getByLabel('no HP')
     this.emailInput = page.getByLabel('Email');
     this.passwordInput = page.getByLabel('Password');
     this.registerBtn = page.getByRole('button', { name: 'Daftar' });
@@ -19,6 +20,7 @@ export class RegisterPage {
 
   async fillRegisterForm({ firstName, email, password }) {
     await this.firstNameInput.fill(firstName);
+    await this.noHpInput.fill(noHP);
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
   }

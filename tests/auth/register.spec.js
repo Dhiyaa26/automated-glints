@@ -14,7 +14,7 @@ test.describe('Register with Email', () => {
     await registerPage.submit();
 
     await expect(
-      page.getByText(/cek email|check your email/i)
+      page.getByText('Verifikasi Email Anda')
     ).toBeVisible();
   });
 
@@ -41,7 +41,7 @@ test.describe('Register with Email', () => {
     await registerPage.submit();
 
     await expect(
-      page.getByText(/email telah terpakai/i)
+      page.getByText('Email telah terpakai')
     ).toBeVisible();
   });
 
